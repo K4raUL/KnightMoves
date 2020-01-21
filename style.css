@@ -1,0 +1,68 @@
+#res {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    font: 24px Arial black;
+    color: red;
+}
+
+.setup, .display {
+    display: inline-block;
+    height: 98vh;
+    vertical-align: top;
+    border: 1px dashed black;
+    box-sizing: border-box;
+}
+
+.setup {
+    width: 18%;
+    font: 20px Arial black;
+}
+
+.display {
+    width: 80%;
+}
+
+.field {
+    text-align: center;
+    display: inline-block;
+    width: 12%;
+    font: 16px Arial black;
+    background-color: white;
+}
+
+.board {
+    margin: -1px;
+    outline: none;
+    opacity: 0;
+}
+
+span {
+    padding-top: 1%;
+}
+
+button {
+    width: 30%;
+    cursor:pointer;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    border: 1px dotted black;
+    font: 20px Arial black;
+}
+
+button:active {
+    border-style: outset;
+}
+
+body, button {
+    margin: 0 !important;
+    padding: 0 !important; 
+     
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+}
