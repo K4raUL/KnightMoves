@@ -9,25 +9,32 @@
 		<div style="text-align: center;">
             <div class="setup"><u>Settings</u>
                 
-                <div style="text-align: left; position: relative; top: 6%;">
-                    <text style="color:darkBlue; font: 16px Arial;">
-                    <b>Left Click(1)</b> - to place start position of knight<br/><br/>
-                    <b>Left Click(2)</b> - to place target position of knight<br/><br/>
-                    <b>Right Click</b> - to delete all positions<br/><br/>
-                    </text>
+                <div style="color:darkBlue; font: 16px Arial; text-align: left; position: relative; top: 6%;">
+                    <div style="display: inline-block; width: 40%;"><b>Left click(1st)</b></div>
+                    <div style="display: inline-block; width: 57%;"> - place start position</div>
+                    <div style="display: inline-block; width: 40%;"><b>Left click(2nd)</b></div>
+                    <div style="display: inline-block; width: 57%;"> - place target position</div>
+                    <div style="display: inline-block; width: 40%;"><b>Right click</b></div>
+                    <div style="display: inline-block; width: 57%;"> - delete all positions</div>
+                    <div style="display: inline-block; width: 40%;"><b>DEL key</b></div>
+                    <div style="display: inline-block; width: 57%;"> - <b>Clear</b> button</div> 
+                    <div style="display: inline-block; width: 40%;"><b>ENTER key</b></div>
+                    <div style="display: inline-block; width: 57%;"> - <b>Calc</b> button</div>
+                    <div style="display: inline-block; width: 90%;"><b></b></div>
+                    <div style="display: inline-block; width: 90%;"><b>Don't click outside the field!</b></div>
                 </div>
                 
                 <div style="text-align: center; position: relative; top: 16%;">
                     <p style="margin-bottom: 0px; text-align: center; position: relative; top: 18%;">Board size</p>
-                    <input type="number" id="Nval" min="3" max="13" class="field" value="3" onchange="setB()">
+                    <input type="number" id="Nval" min="3" max="10" class="field" value="3" onchange="setB()">
                     <p class="field">x</p>
-                    <input type="number" id="Mval" min="3" max="13" class="field" value="3" onchange="setB()">
+                    <input type="number" id="Mval" min="3" max="10" class="field" value="3" onchange="setB()">
                 </div>
                 
                 <div style="text-align: center; position: relative; top: 24%;">
-                    <button onclick="Clear()" style="display: inline-block;">Clear</button>
-                    <button onclick="Calc()" style="display: inline-block;">Calc</button>
-                    <button onclick="Show()" style="display: inline-block;">Show</button>
+                    <button title="Clear to initial state" onclick="Clear()" style="display: inline-block;">Clear</button>
+                    <button title="Count number of ways (displaying below)" onclick="Calc()" style="display: inline-block;">Calc</button>
+                    <button title="Show all possible ways 1 by 1" onclick="Show()" style="display: inline-block;">Show</button>
                 </div>
                 
                 <p id="res"></p>
@@ -51,11 +58,6 @@
                 <input class="board" type="image" id="board0_13" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board0_14" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board0_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board0_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board0_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board0_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board0_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board0_20" onmousedown="setCell(event)" src="black.png">
                 
                 <input class="board" type="image" id="board1_0" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board1_1" onmousedown="setCell(event)" src="black.png">
@@ -73,11 +75,6 @@
                 <input class="board" type="image" id="board1_13" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board1_14" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board1_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board1_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board1_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board1_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board1_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board1_20" onmousedown="setCell(event)" src="white.png">
                 
                 <input class="board" type="image" id="board2_0" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board2_1" onmousedown="setCell(event)" src="white.png">
@@ -95,11 +92,6 @@
                 <input class="board" type="image" id="board2_13" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board2_14" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board2_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board2_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board2_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board2_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board2_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board2_20" onmousedown="setCell(event)" src="black.png">
                 
                 <input class="board" type="image" id="board3_0" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board3_1" onmousedown="setCell(event)" src="black.png">
@@ -117,11 +109,6 @@
                 <input class="board" type="image" id="board3_13" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board3_14" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board3_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board3_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board3_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board3_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board3_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board3_20" onmousedown="setCell(event)" src="white.png">                 
 
                 <input class="board" type="image" id="board4_0" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board4_1" onmousedown="setCell(event)" src="white.png">
@@ -139,11 +126,6 @@
                 <input class="board" type="image" id="board4_13" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board4_14" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board4_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board4_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board4_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board4_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board4_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board4_20" onmousedown="setCell(event)" src="black.png">
                 
                 <input class="board" type="image" id="board5_0" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board5_1" onmousedown="setCell(event)" src="black.png">
@@ -161,11 +143,6 @@
                 <input class="board" type="image" id="board5_13" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board5_14" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board5_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board5_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board5_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board5_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board5_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board5_20" onmousedown="setCell(event)" src="white.png">
                 
                 <input class="board" type="image" id="board6_0" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board6_1" onmousedown="setCell(event)" src="white.png">
@@ -183,11 +160,6 @@
                 <input class="board" type="image" id="board6_13" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board6_14" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board6_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board6_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board6_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board6_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board6_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board6_20" onmousedown="setCell(event)" src="black.png">
                 
                 <input class="board" type="image" id="board7_0" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board7_1" onmousedown="setCell(event)" src="black.png">
@@ -205,11 +177,6 @@
                 <input class="board" type="image" id="board7_13" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board7_14" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board7_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board7_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board7_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board7_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board7_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board7_20" onmousedown="setCell(event)" src="white.png">    
 
                 <input class="board" type="image" id="board8_0" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board8_1" onmousedown="setCell(event)" src="white.png">
@@ -227,11 +194,6 @@
                 <input class="board" type="image" id="board8_13" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board8_14" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board8_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board8_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board8_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board8_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board8_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board8_20" onmousedown="setCell(event)" src="black.png">                 
 
                 <input class="board" type="image" id="board9_0" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board9_1" onmousedown="setCell(event)" src="black.png">
@@ -249,77 +211,7 @@
                 <input class="board" type="image" id="board9_13" onmousedown="setCell(event)" src="black.png">
                 <input class="board" type="image" id="board9_14" onmousedown="setCell(event)" src="white.png">
                 <input class="board" type="image" id="board9_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board9_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board9_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board9_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board9_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board9_20" onmousedown="setCell(event)" src="white.png">
-                
-                <input class="board" type="image" id="board10_0" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_1" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_2" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_3" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_4" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_5" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_6" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_7" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_8" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_9" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_10" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_11" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_12" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_13" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_14" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board10_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board10_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board10_20" onmousedown="setCell(event)" src="black.png">
-                
-                <input class="board" type="image" id="board11_0" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_1" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_2" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_3" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_4" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_5" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_6" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_7" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_8" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_9" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_10" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_11" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_12" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_13" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_14" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_15" onmousedown="setCell(event)" src="black.png">   
-                <input class="board" type="image" id="board11_16" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_17" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_18" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board11_19" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board11_20" onmousedown="setCell(event)" src="white.png">
-                
-                <input class="board" type="image" id="board12_0" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_1" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_2" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_3" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_4" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_5" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_6" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_7" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_8" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_9" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_10" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_11" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_12" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_13" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_14" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_15" onmousedown="setCell(event)" src="white.png">   
-                <input class="board" type="image" id="board12_16" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_17" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_18" onmousedown="setCell(event)" src="black.png">
-                <input class="board" type="image" id="board12_19" onmousedown="setCell(event)" src="white.png">
-                <input class="board" type="image" id="board12_20" onmousedown="setCell(event)" src="black.png">                 
+       
             </span>
         </div>    
 </body>
