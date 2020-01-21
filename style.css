@@ -26,19 +26,28 @@
 .field {
     text-align: center;
     display: inline-block;
-    width: 12%;
+    width: 16%;
     font: 16px Arial black;
     background-color: white;
+    outline: none;
 }
 
 .board {
     margin: -1px;
     outline: none;
     opacity: 0;
+    
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
 
 span {
-    padding-top: 1%;
+    padding-left: 0.777%;
+    padding-right: 0.777%;
+    padding-top: 2%;
 }
 
 button {
