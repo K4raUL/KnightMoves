@@ -1,8 +1,8 @@
 // const
 var minR = 3
-var maxR = 13
-var maxW = 21
-var maxH = 13
+var maxR = 10
+var maxW = 16
+var maxH = 10
 
 //---------------------------------------------------
 var N = minR
@@ -15,6 +15,13 @@ var state = 0
 //---------------------------------------------------
 
 document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function (e) {
+    var code = e.keyCode;
+    if (code == 46) {           // "delete" key
+        Clear();
+    }
+}, false);
 
 function NextSteps(x, y) 
 {
@@ -81,6 +88,11 @@ function setCell(e)
     var xi = Number(parseInt(idstr))
     var yi = Number(idstr[idstr.length-2] + idstr[idstr.length-1])
 
+    // dont click outside field!
+    if ( xi<j0 || xi>=j0+M ) return
+    if ( yi<i0 || yi>=i0+N ) return
+    
+    
     // deleting all positions on right click
     if (e.which == 3) {
         field.fill(0)
