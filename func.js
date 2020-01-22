@@ -98,7 +98,6 @@ function NextSteps(x, y)
 
 function Calc()
 {
-    //alert("N = " + N + ", M = " + M + "\n" + field + "\nstart: " + start + "\nfinish: " + finish)
     recWay(start[0], start[1])
     document.getElementById("res").innerHTML = res
 }
@@ -109,8 +108,9 @@ function recWay(x, y)
     var j0 = ~~((maxH - M) / 2)
     
     var res0 = NextSteps(x, y)                                  // receiving all neighbours of current point
-    alert(res0)
-    // tupik
+    //alert(res0)
+    
+    // no more ways to go
     if (res0.length == 0) return
     
     for (var i = 0; i < res0.length; i++) {
