@@ -21,6 +21,7 @@
                     <div style="display: inline-block; width: 40%;"><b>ENTER key</b></div>
                     <div style="display: inline-block; width: 57%;"> - <b>Calc</b> button</div>
                     <div style="display: inline-block; width: 90%;"><b></b></div>
+                    <div style="display: inline-block; width: 90%;"><b>Setting board size bigger than 6x6 is not recommended!</b></div>
                 </div>
                 
                 <div style="text-align: center; position: relative; top: 16%;">
@@ -33,8 +34,17 @@
                 <div style="text-align: center; position: relative; top: 24%;">
                     <button title="Clear to initial state" onclick="Clear()" style="display: inline-block;">Clear</button>
                     <button title="Count number of ways (displaying below)" onclick="Calc()" style="display: inline-block;">Calc</button>
-                    <button title="Show all possible ways 1 by 1" onclick="Show()" style="display: inline-block;">Show</button>
                 </div>
+                
+                <div style="text-align: center; position: relative; top: 25%;">
+                    <button title="Show shortest way step by step" onclick="Show(0)" style="display: inline-block; width:42%;" id="showmin">Show MIN</button>
+                    <button title="Show longest way step by step" onclick="Show(1)" style="display: inline-block; width:42%;" id="showmax">Show MAX</button>
+                </div>
+
+                <div style="text-align: center; position: relative; top: 26%;">
+                    <p style="display: inline-block; width: 42%;" id="minW"></p>
+                    <p style="display: inline-block; width: 42%;" id="maxW"></p>
+                </div>                 
                 
                 <p id="res"></p>
             
